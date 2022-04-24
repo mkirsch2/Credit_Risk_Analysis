@@ -4,7 +4,7 @@
 The purpose of this analysis is to help predict if someone has a high or low risk status for a loan based on several factors. Using the credit card credit dataset from LendingClub, several models with unbalanced classes (good loans and risky loans) were trained and evaluated. The imbalanced-learn and scikit-learn libraries were used to build and evaluate these models using the following resampling algorithms -
 
 - RandomOverSampler (oversample)
-- SMOTE (overample)
+- SMOTE (oversample)
 - ClusterCentroids (undersample)
 - SMOTEENN (combinatorial)
 - BalancedRandomForestClassifier (reduce bias)
@@ -15,8 +15,7 @@ To compare the models, the balanced accuracy scores, precision, and recall score
 
 - Balanced accuracy score: How often the classifier is correct with the model.
 - Precision: The measure of how reliable a positive classification is. A low precision is indicative of a large number of false positives.
-- Recal score: The ability of the classifier to find all the positive samples. A low recall is indicative of a large number of false negatives.
-
+- Recall score: The ability of the classifier to find all the positive samples. A low recall is indicative of a large number of false negatives.
 
 ### RandomOverSampler (oversample)
 - Balanced accuracy score = 65%
@@ -25,7 +24,7 @@ To compare the models, the balanced accuracy scores, precision, and recall score
 
 ![RandomOverSampler](images/RandomOverSampler.gif)
 
-### SMOTE (overample)
+### SMOTE (oversample)
 - Balanced accuracy score = 62%
 - Precision = 1%
 - Recall score = 59%
@@ -61,4 +60,6 @@ To compare the models, the balanced accuracy scores, precision, and recall score
 ![EasyEnsemble](images/EasyEnsemble.gif)
 
 ##Summary
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+Overall, each model produced weak precision, which is indicative of a large number of false positives. Looking at recall scores, both the BalancedRandomForestClassifier and EasyEnsembleClassifier models outperformed the other models, meaning they are more effective at finding the positive samples.
+
+Out of the five models, I would recommend the EasyEnsembleClassifier, due to it having the highest balanced accuracy score and tied for the highest recall score. However, due to the extremely low precision for each model, I would advise additional models and testing to be conducted until the precision has increased. With all the current models, there will be countless low credit risk individuals marked as high credit risk and denied a line of credit.
