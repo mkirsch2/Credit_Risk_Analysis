@@ -22,42 +22,42 @@ To compare the models, the balanced accuracy scores, precision, and recall score
 - Precision = 1%
 - Recall score = 62%
 
-![RandomOverSampler](images/RandomOverSampler.gif)
+![RandomOverSampler](Images/RandomOverSampler.gif)
 
 ### SMOTE (oversample)
 - Balanced accuracy score = 62%
 - Precision = 1%
 - Recall score = 59%
 
-![SMOTE](images/SMOTE.gif)
+![SMOTE](Images/SMOTE.gif)
 
 ### ClusterCentroids (undersample)
 - Balanced accuracy score = 59%
 - Precision = 1%
 - Recall score = 61%
 
-![ClusterCentroids](images/ClusterCentroids.gif)
+![ClusterCentroids](Images/ClusterCentroids.gif)
 
 ### SMOTEENN (combinatorial)
 - Balanced accuracy score = 64%
 - Precision = 1%
 - Recall score = 70%
 
-![SMOTEENN](images/SMOTEENN.gif)
+![SMOTEENN](Images/SMOTEENN.gif)
 
 ### BalancedRandomForestClassifier (reduce bias)
 - Balanced accuracy score = 67%
 - Precision = 1%
 - Recall score = 91%
 
-![BalancedRF](images/BalancedRF.gif)
+![BalancedRF](Images/BalancedRF.gif)
 
 ### EasyEnsembleClassifier (reduce bias)
 - Balanced accuracy score = 93%
 - Precision = 1%
 - Recall score = 91%
 
-![EasyEnsemble](images/EasyEnsemble.gif)
+![EasyEnsemble](Images/EasyEnsemble.gif)
 
 ##Summary
 Overall, each model produced weak precision, which is indicative of a large number of false positives. Looking at recall scores, both the BalancedRandomForestClassifier and EasyEnsembleClassifier models outperformed the other models, meaning they are more effective at finding the positive samples.
